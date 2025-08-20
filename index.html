@@ -120,10 +120,22 @@
 
       fetch(SCRIPT_URL, {
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       })
-      .then(res => alert("✅ ¡Gracias por confirmar!"))
+      .then(res => res.text())
+      .then(msg => {
+        if (msg === "OK") {
+          alert("✅ ¡Gracias por confirmar!");
+          document.querySelector("button").disabled = true; // Deshabilita botón
+        } else if (msg === "Ya confirmado") {
+          alert("⚠️ Ya has confirmado antes.");
+          document.querySelector("button").disabled = true;
+        }
+      })
       .catch(err => alert("❌ Error al enviar, intenta de nuevo"));
+
+
     });
   </script>
 </html>
