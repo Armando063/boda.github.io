@@ -2,43 +2,286 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Invitación de Boda</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; background: #fdf6f0; }
-    .invitacion { border: 2px solid #e2cfc3; padding: 20px; border-radius: 10px; display: inline-block; background: #fff; }
-    h1 { color: #c0392b; }
+  <title>Boda Armando & Brenda Fernanda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+      background: url('https://www.transparenttextures.com/patterns/concrete-wall.png') repeat;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .hero {
+      background: rgba(255,255,255,0.9);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      padding: 2rem;
+    }
+    .hero img {
+      border-radius: 15px;
+      margin-bottom: 1rem;
+    }
+    .countdown {
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .countdown div {
+      text-align: center;
+    }
+    .countdown span {
+      font-size: 1rem;
+      display: block;
+      margin-top: 0.25rem;
+      color: #555;
+    }
   </style>
 </head>
-<body>
-  <div class="invitacion" id="invitacion">
-    <h1>Invitación</h1>
-    <p id="nombre"></p>
-    <p id="mensaje"></p>
-    <p id="boletos"></p>
+<body class="d-flex flex-column align-items-center p-4">
+  <audio autoplay loop>
+        <source src="audio/musica.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+  </audio>
+
+  <!-- HERO CARD -->
+  <div class="hero text-center col-md-7">
+    <img src="img/img1.jpeg" alt="Pareja" class="img-fluid shadow" width="500">
+    <h5 class="text-muted">¡Nos Casamos!</h5>
+    <h1 class=" fw-bold">Armando <span class="text-secondary">&</span> Brenda Fernanda</h1>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown fs-2 mt-3" id="countdown">
+      <div><span id="days">0</span> Días</div>
+      <div><span id="hours">0</span> Horas</div>
+      <div><span id="minutes">0</span> Minutos</div>
+      <div><span id="seconds">0</span> Segundos</div>
+    </div>
   </div>
 
+  <!-- BLOQUE INVITACIÓN -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 bg-white shadow rounded p-4">
+      <h4 class="fw-bold text-center mb-4">Invitación válida para:</h4>
+      <div class="row align-items-center">
+        <!-- DATOS -->
+        <div class="col-md-8 offset-md-2">
+          <p><strong>NOMBRE:</strong> <span id="invitadoNombre"></span></p>
+          <p><strong>MENSAJE:</strong>  
+            Les extendemos una cálida invitación para ser parte de este día tan especial para nosotros.  
+            Su presencia hará que nuestra celebración sea aún más significativa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALERÍA DE FOTOS -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4 text-center">
+      <div class="d-flex flex-column gap-3">
+        <img src="img/img3.jpeg" class="img-fluid rounded shadow" alt="foto 1">
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="d-flex flex-column gap-3">
+        <img src="img/img2.jpeg" class="img-fluid rounded shadow" alt="foto 2">
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="d-flex flex-column gap-3">
+        <img src="img/img4.jpeg" class="img-fluid rounded shadow" alt="foto 3">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DONDE Y CUANDO -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 bg-white text-center">
+      <div class="d-flex flex-column shadow gap-3">
+        <h4 class="fw-bold text-center my-4">Dónde y Cuándo:</h4>
+        <div class="col-md-8 offset-md-2 col-sm-12">
+          <div class="card mb-4 mx-5 shadow">
+            <img src="img/recepcion.jpeg" class="card-img-top">
+            <div class="card-body">
+              <h4 class="card-title mb-3"><b>Recepción</b></h4>
+              <p class="card-text" style="text-align: justify;"><b>Cuando: </b>06 de diciembre de 2025 17:00hrs.</p>
+              <p class="card-text" style="text-align: justify;"><b>Dirección: </b>Av. Francisco Villa, Col. Héroes de Tecamac, 55763 Ciudad de México, Méx.</p>
+              <a href="https://maps.app.goo.gl/qSqYu3icyzJgC7ZR7" class="btn btn-success" target="_blank">Ver ubicación</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REGALOS -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 bg-white text-center">
+      <div class="d-flex flex-column shadow gap-3">
+        <h4 class="fw-bold text-center my-4">Regalos</h4>
+        <div class="col-md-8 offset-md-2 col-sm-12">
+          <div class="card mb-4 mx-5 shadow">
+            <div class="card-body">
+              <p class="card-text"><b>"</b>Tu presencia es nuestro mejor regalo, y si deseas apoyarnos, te invitamos a unirte a nuestra lluvia de sobres para ayudarnos a empezar nuestra nueva vida juntos.<b>"</b></p>
+              <img src="img/regalo.jpg" width="200">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Confirma tu asistencia -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 bg-white text-center">
+      <div class="d-flex flex-column shadow gap-3">
+        <h4 class="fw-bold text-center my-4">Confirmar asistencia</h4>
+        <div class="col-md-8 offset-md-2 col-sm-12">
+          <div class="card mb-4 mx-5 shadow">
+            <div class="card-body">
+              <h4>Armando & Brenda Fernanda 💍</h4>
+              <h4 id="saludo"></h4>
+              <form id="rsvpForm" class="container" style="max-width:500px;">
+                <input type="hidden" name="id" id="id_invitado">
+                <input type="hidden" name="nombre" id="nombre_invitado">
+
+                <div class="mb-3">
+                  <label class="form-label">¿Asistirás?</label>
+                  <select class="form-select" id="asistencia" required>
+                    <option value="Sí">Sí, asistiré</option>
+                    <option value="No">No podré asistir</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Número de lugares confirmados</label>
+                  <input type="number" class="form-control" id="lugares" min="0">
+                  <div class="form-text" id="nota-lugares"></div>
+                </div>
+
+                <button type="submit" class="btn btn-dark">Confirmar 🎉</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FRASE FINAL -->
+<div class="container text-center my-5">
+  <blockquote class="blockquote">
+    <p class="mb-0 fst-italic">"La respuesta es siempre el amor, no importa la pregunta."</p>
+  </blockquote>
+</div>
+  <script src="js/invitados.js"></script>
   <script>
-    // Obtener ID desde la URL ?id=1
-    const urlParams = new URLSearchParams(window.location.search);
-    const idInvitado = urlParams.get('id');
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9TY0MufiXwZ-u-yOZJCbOFRc3kuO9Y9FIHAPQQkAd04KkOEOjWq-WXXwHW-9HLGyDFQ/exec";
 
-    // URL de tu Google Apps Script
-    const urlSheet = 'https://script.google.com/macros/s/AKfycbwDEoDx9ICl1yoRbhAjtuZ4mkdTzm5jSX1XthxNVH4R-hybgl_Nzdmfg5zMT9if8T3bbg/exec';
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
 
-    fetch(urlSheet)
-      .then(response => response.json())
-      .then(data => {
-        const invitado = data.find(item => item.ID == idInvitado);
-        if(invitado){
-          document.getElementById('nombre').innerText = "Hola " + invitado.Nombre;
-          document.getElementById('mensaje').innerText = invitado.Mensaje;
-          document.getElementById('boletos').innerText = "Boletos asignados: " + invitado.Boletos;
-        } else {
-          document.getElementById('invitacion').innerHTML = "<p>ID no encontrado</p>";
-        }
-      })
-      .catch(err => console.error(err));
-  </script>
+  const form = document.getElementById("rsvpForm");
+  const saludo = document.getElementById("saludo");
+  const invitado_nombre = document.getElementById("invitadoNombre");
+  const lugaresInput = document.getElementById("lugares");
+  const asistenciaSelect = document.getElementById("asistencia");
+  const submitBtn = form.querySelector("button[type=submit]");
+  const notaLugares = document.getElementById("nota-lugares");
+
+  if (!id || !invitados[id]) {
+    saludo.innerText = "Invitación no válida ❌";
+    form.style.display = "none";
+  } else {
+    const invitado = invitados[id];
+    invitado_nombre.innerText = invitado.nombre;
+
+    // Si ya confirmó, bloqueamos el formulario
+    if (localStorage.getItem(`rsvp_${id}`)) {
+      saludo.innerText = `Ya confirmaste tu asistencia ✅ ¡Gracias ${invitado.nombre}!`;
+      bloquearFormulario();
+    } else {
+      saludo.innerText = `¡Hola ${invitado.nombre}, tienes ${invitado.lugares} lugares reservados! 🎉`;
+
+      document.getElementById("id_invitado").value = id;
+      document.getElementById("nombre_invitado").value = invitado.nombre;
+
+      lugaresInput.max = invitado.lugares;
+      lugaresInput.value = invitado.lugares;
+
+      notaLugares.innerText = `Puedes confirmar hasta ${invitado.lugares} lugar(es).`;
+
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const data = {
+          id: id,
+          nombre: invitado.nombre,
+          asistencia: asistenciaSelect.value,
+          lugares: lugaresInput.value
+        };
+
+        fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        })
+        .then(() => {
+          alert("✅ ¡Gracias por confirmar!");
+          localStorage.setItem(`rsvp_${id}`, true); // Guardar que ya confirmó
+          saludo.innerText = `Ya confirmaste tu asistencia ✅ ¡Gracias ${invitado.nombre}!`;
+          bloquearFormulario();
+        })
+        .catch(err => alert("❌ Error al enviar, intenta de nuevo"));
+      });
+    }
+  }
+
+  // 🔒 Función para bloquear formulario
+  function bloquearFormulario() {
+    asistenciaSelect.disabled = true;
+    lugaresInput.disabled = true;
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Confirmación registrada";
+    submitBtn.classList.remove("btn-dark");
+    submitBtn.classList.add("btn-success");
+  }
+
+  // Ejemplo contador regresivo
+    const weddingDate = new Date("2025-12-06T17:00:00").getTime();
+    const countdownEl = {
+      days: document.getElementById("days"),
+      hours: document.getElementById("hours"),
+      minutes: document.getElementById("minutes"),
+      seconds: document.getElementById("seconds"),
+    };
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.days.textContent = days;
+      countdownEl.hours.textContent = hours;
+      countdownEl.minutes.textContent = minutes;
+      countdownEl.seconds.textContent = seconds;
+    }, 1000);
+</script>
+
 </body>
-
 </html>
