@@ -150,26 +150,26 @@
     <div class="col-md-12 bg-white text-center">
       <div class="d-flex flex-column shadow gap-3">
         <h2 class="fw-bold text-center my-4">Confirmar asistencia</h2>
-        <div class="col-md-8 offset-md-2 col-sm-12">
+        <div class="col-md-12">
           <div class="card mb-4 mx-5 shadow">
             <div class="card-body">
               <h2 class="mb-4">Armando & Brenda Fernanda 💍</h2>
               <h4 class="mb-4" id="saludo"></h4>
-              <form id="rsvpForm" class="container" style="max-width:500px;">
+              <form id="rsvpForm" class="container" style="max-width:800px;">
                 <input type="hidden" name="id" id="id_invitado">
                 <input type="hidden" name="nombre" id="nombre_invitado">
 
                 <div class="mb-3">
                   <label class="form-label fs-4">¿Asistirás?</label>
-                  <select class="form-select" id="asistencia" required>
+                  <select class="form-select fs-5" id="asistencia" required>
                     <option value="Sí">Sí, asistiré</option>
                     <option value="No">No podré asistir</option>
                   </select>
                 </div>
 
                 <div class="mb-3">
-                  <label class="form-label">Número de lugares confirmados</label>
-                  <input type="number" class="form-control" id="lugares" min="0">
+                  <label class="form-label fs-4">Número de lugares confirmados</label>
+                  <input type="number" class="form-control fs-5" id="lugares" min="0">
                   <div class="form-text fs-4" id="nota-lugares"></div>
                 </div>
 
