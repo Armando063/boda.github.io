@@ -127,15 +127,15 @@
             <div class="card-body">
               <h2 class="card-title mb-4 mt-4"><b>¡Gracias por acompañarnos en este día tan especial!</b></h2>
               <div class="row mt-5">
-                <div class="col-md-2"></div>
-                <div class="col-md-4">
+                <div class="col-md-2 col-sm-0"></div>
+                <div class="col-sm-8 col-lg-4">
                  <div style="border: 5px solid #fff; box-shadow: 0 4px 6px 0 #ccc; border-radius: 50%;"><img src="img/novia_padres.jpg" style="border-radius: 50%;" width="280" /></div>
                  <h4 class="mt-5 mb-4" style="color: #5e2129">Norma Garcia y Marco Hernández</h4>
                  <p>- Padres de la Novia -</p>
                 </div>
                 <div class="col-md-1"></div>
-
-                <div class="col-md-4">
+                <div class="col-md-2 d-block d-lg-none d-xl-none"></div>
+                <div class="col-sm-8 col-lg-4">
                  <div style="border: 5px solid #fff; box-shadow: 0 4px 6px 0 #ccc; border-radius: 50%;"><img src="img/novio_padres.jpg" style="border-radius: 50%;" width="280" /></div> 
                  <h4 class="mt-5 mb-4" style="color: #5e2129">Leticia López y Magdaleno Bonilla</h4>
                  <p>- Padres del Novio -</p>
@@ -238,7 +238,7 @@
   </div>
 
   <div class="modal fade" id="invaiteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
     <div class="modal-content">
       
       <div class="modal-body text-center">
@@ -263,7 +263,11 @@
       $('#ingresar').click(function(e){
         e.preventDefault();
       $('#invaiteModal').modal('hide');
-      $('audio#musica')[0].play();
+      var audio = $('audio#musica')[0];
+      var minutoEspecifico = 5;
+
+      audio.currentTime = minutoEspecifico;
+      audio.play();
       });
     });
   </script>
