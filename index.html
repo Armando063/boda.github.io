@@ -10,11 +10,17 @@
   <meta property="og:description" content="Nuestra boda" />
 </head>
 <style>
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/NatureBeautyPersonalUse-9Y2DK.ttf') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
     body {
-      background-image: url('img/gray-floral.png') ;
-      background-color: rgba(94, 33, 41, 0.5);
+      background-image: url('img/O6DXQE0.jpg') ;
+      background-color: rgba(94, 33, 41, 2);
       background-blend-mode: screen;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, cursive;
+      font-family: Montserrat, sans-serif;
     }
     .hero {
       background: rgba(255,255,255,0.9);
@@ -61,10 +67,10 @@
 
         <!-- COUNTDOWN -->
         <div class="countdown fs-2 mt-3" id="countdown">
-          <div><h1 id="days">0</h1> Días</div>
-          <div><h1 id="hours">0</h1> Horas</div>
-          <div><h1 id="minutes">0</h1> Minutos</div>
-          <div><h1 id="seconds">0</h1> Segundos</div>
+          <div><h1 id="days" style="font-family: cursive;"><b>0</b></h1> Días</div>
+          <div><h1 id="hours" style="font-family: cursive;"><b>0</b></h1> Horas</div>
+          <div><h1 id="minutes" style="font-family: cursive;"><b>0</b></h1> Minutos</div>
+          <div><h1 id="seconds" style="font-family: cursive;"><b>0</b></h1> Segundos</div>
         </div>
       </div>
     </div>
@@ -110,6 +116,39 @@
   </div>
 </div>
 
+<!-- Nuestros padres -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-12 bg-white text-center">
+      <div class="d-flex flex-column shadow gap-3">
+        <h2 class="fw-bold text-center my-4" style="color: #5e2129">Nuestros Padres</h2>
+        <div class="col-md-10 offset-md-1 col-sm-12">
+          <div class="card mb-4 mx-5 shadow">
+            <div class="card-body">
+              <h2 class="card-title mb-4 mt-4"><b>¡Gracias por acompañarnos en este día tan especial!</b></h2>
+              <div class="row mt-5">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                 <div style="border: 5px solid #fff; box-shadow: 0 4px 6px 0 #ccc; border-radius: 50%;"><img src="img/novia_padres.jpg" style="border-radius: 50%;" width="280" /></div>
+                 <h4 class="mt-5 mb-4" style="color: #5e2129">Norma Garcia y Marco Hernández</h4>
+                 <p>- Padres de la Novia -</p>
+                </div>
+                <div class="col-md-1"></div>
+
+                <div class="col-md-4">
+                 <div style="border: 5px solid #fff; box-shadow: 0 4px 6px 0 #ccc; border-radius: 50%;"><img src="img/novio_padres.jpg" style="border-radius: 50%;" width="280" /></div> 
+                 <h4 class="mt-5 mb-4" style="color: #5e2129">Leticia López y Magdaleno Bonilla</h4>
+                 <p>- Padres del Novio -</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- DONDE Y CUANDO -->
 <div class="container my-5">
   <div class="row justify-content-center">
@@ -123,8 +162,8 @@
             </div>
             <div class="card-body">
               <h2 class="card-title mb-3"><b>Recepción</b></h2>
-              <p class="card-text fs-3" style="text-align: justify;"><b>Cuando: </b>06 de diciembre de 2025 17:00hrs.</p>
-              <p class="card-text fs-3" style="text-align: justify;"><b>Dirección: </b>Av. Francisco Villa, Col. Héroes de Tecamac, 55763 Ciudad de México, Méx.</p>
+              <p class="card-text fs-3" style="text-align: justify;"><b>Cuando: </b><span style="font-family: cursive;"><b>06</b></span> de diciembre de <span style="font-family: cursive;"><b>2025 17:00</b></span>hrs.</p>
+              <p class="card-text fs-3" style="text-align: justify;"><b>Dirección: </b>Av. Francisco Villa, Col. Héroes de Tecamac, <span style="font-family: cursive;"><b>55763</b></span> Ciudad de México, Méx.</p>
               <a href="https://maps.app.goo.gl/qSqYu3icyzJgC7ZR7" class="btn btn-success fs-3" target="_blank">Ver ubicación</a>
             </div>
           </div>
@@ -163,7 +202,7 @@
           <div class="card mb-4 mx-5 shadow">
             <div class="card-body">
               <h2 class="mb-4">Brenda Fernanda & Armando 💍</h2>
-              <h4 class="mb-4" id="saludo"></h4>
+              <span style="font-family: cursive;"><b><h4 class="mb-4" id="saludo"></h4></b></span>
               <form id="rsvpForm" class="container" style="max-width:800px;">
                 <input type="hidden" name="id" id="id_invitado">
                 <input type="hidden" name="nombre" id="nombre_invitado">
@@ -178,8 +217,8 @@
 
                 <div class="mb-3">
                   <label class="form-label fs-4">Número de lugares confirmados</label>
-                  <input type="number" class="form-control fs-5" id="lugares" min="0">
-                  <div class="form-text fs-4" id="nota-lugares"></div>
+                  <span style="font-family: cursive;"><input type="number" class="form-control fs-5" id="lugares" min="0"></span>
+                  <span style="font-family: cursive;"><div class="form-text fs-4" id="nota-lugares"></div></span>
                 </div>
 
                 <button type="submit" class="btn btn-success fs-3">Confirmar 🎉</button>
@@ -193,7 +232,7 @@
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="fst-italic text-center text-white">"El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece."</h2>
+        <h2 class="fst-italic text-center">"El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece."</h2>
       </div>
     </div>
   </div>
